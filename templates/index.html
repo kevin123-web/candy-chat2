@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat de Dulces</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <main class="chat-container" role="main">
+    <header class="chat-header" role="banner">🍭 DulceChat</header>
+
+    <section id="chatbox" class="chat-box" aria-live="polite" aria-label="Mensajes del chat"></section>
+
+    <div class="chat-input">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Escribe tu dulce favorito..."
+        aria-label="Caja de texto para enviar mensaje"
+        autocomplete="off"
+      />
+      <button type="button" onclick="sendMessage()" aria-label="Enviar mensaje">Enviar</button>
+    </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
